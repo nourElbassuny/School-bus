@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    android:gravity="top|center_horizontal"
+    android:orientation="vertical"
+    tools:context=".ShowStudent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="Edit"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/Eline1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|bottom"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/EshowImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            android:src="@drawable/emptyimage" />
+
+        <ImageView
+            android:id="@+id/EtakeImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/imagetake" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background"
+            android:gravity="top|center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/EstudentName"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/text_background"
+                android:hint="Student Name"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                android:textSize="30sp"
+                tools:ignore="RtlSymmetry" />
+
+            <EditText
+                android:id="@+id/EstudentAge"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/text_background"
+                android:hint="Age"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:textSize="30sp"
+                tools:ignore="RtlSymmetry" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_horizontal"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Gender"
+                    android:textSize="25dp" />
+
+                <RadioGroup
+                    android:id="@+id/EradioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/EradioMale"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:checked="false"
+                        android:text="  Male"
+                        android:textSize="20dp" />
+
+                    <RadioButton
+                        android:id="@+id/EradioFemale"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:checked="false"
+                        android:text="   Female"
+                        android:textSize="20dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:text="Choose the education stage"
+                android:textSize="25sp" />
+
+            <Spinner
+                android:id="@+id/Espinner"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:layout_gravity="left"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                tools:ignore="RtlHardcoded" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/Elocation"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/text_background"
+                    android:inputType="text"
+                    android:hint="Location"
+                    android:textSize="34sp" />
+
+                <Button
+                    android:id="@+id/EbuttonLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="25dp"
+                    android:text="Location" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/Efinish"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:text="Finish" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

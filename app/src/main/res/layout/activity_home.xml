@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    android:gravity="top|center_horizontal"
+    android:orientation="vertical"
+    tools:context=".Home">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp">
+
+        <ImageView
+            android:id="@+id/signOut"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/logout" />
+        <TextView
+            android:id="@+id/titleName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/signOut"
+            android:text="Welcome"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:gravity="top|center_horizontal"
+        android:paddingTop="20dp"
+        android:paddingHorizontal="20dp">
+
+        <LinearLayout
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/add_new_student"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:background="@drawable/button_background"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:text="Add New Student" />
+        </LinearLayout>
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recycler_view"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_above="@+id/listView"/>
+
+
+    </RelativeLayout>
+</LinearLayout>

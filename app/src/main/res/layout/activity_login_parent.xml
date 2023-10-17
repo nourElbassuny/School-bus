@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginDriver">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/circle"
+                    android:padding="10dp"
+                    android:src="@drawable/lock" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="LOGIN For Parent"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-15dp"
+                android:rotation="45"
+                android:src="@drawable/square" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView1"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginRight="30dp">
+
+                <ImageView
+                    android:id="@+id/imageView_userIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/main"
+                    android:padding="8dp"
+                    android:src="@drawable/person"
+                    app:tint="@color/white" />
+
+                <EditText
+                    android:id="@+id/email_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageView_userIcon"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@id/imageView_userIcon"
+                    android:background="@color/grey"
+                    android:inputType="textEmailAddress"
+                    android:hint="Email"
+                    android:paddingLeft="10dp"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout1"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp">
+
+                <ImageView
+                    android:id="@+id/imageView_passwordIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/main"
+                    android:padding="8dp"
+                    android:src="@drawable/lockpassword"
+                    app:tint="@color/white" />
+
+                <EditText
+                    android:id="@+id/password_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageView_passwordIcon"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@id/imageView_passwordIcon"
+                    android:background="@color/grey"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="10dp"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/signIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:text="SIGN IN"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginRight="30dp" />
+
+
+            <TextView
+                android:id="@+id/signupParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/main"
+                android:text="@string/create_new_account"
+                android:layout_below="@+id/signIn"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

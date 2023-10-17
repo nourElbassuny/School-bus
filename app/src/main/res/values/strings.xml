@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SchoolBus</string>
+    <string name="driver">Driver</string>
+    <string name="parent">Parent</string>
+    <string name="create_new_account">create new account</string>
+    <string-array name="stages">
+        <item>Early childhood education</item>
+        <item>Primary education</item>
+        <item>Preparatory education</item>
+        <item>Secondary education</item>
+    </string-array>
+</resources>
