@@ -10,11 +10,9 @@ import android.content.ContentResolver;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
-import android.location.Location;
 import android.net.Uri;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.webkit.MimeTypeMap;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -30,21 +28,16 @@ import android.view.View;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
-import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
-import java.util.Objects;
 
 public class AddStudent extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     String userID;
@@ -63,6 +56,10 @@ public class AddStudent extends AppCompatActivity implements AdapterView.OnItemS
     private Spinner spinner;
     private Uri mImageUri;
     private String stageSelected, name, age, gender, Latitude, Longitude;
+
+    public AddStudent(ProgressBar mProgressBar) {
+        this.mProgressBar = mProgressBar;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
