@@ -1,2 +1,10 @@
 # School-Bus
-School bus app using java object-oriented programming (OOP) &amp; XML &amp; Firebase
+Parent Android app for School Bus Tracking System Project.
+
+## Features
+<ul type="disc">
+  <li>Login</li>
+  <li>List of Kids</li>
+  <li>Upload Photo</li>
+  
+</ul>
